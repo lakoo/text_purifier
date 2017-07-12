@@ -1,0 +1,237 @@
+\hypertarget{classlakoo_1_1_filter_list}{}\section{lakoo\+:\+:Filter\+List Class Reference}
+\label{classlakoo_1_1_filter_list}\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+
+
+Store the list of words to filter.  
+
+
+
+
+{\ttfamily \#include $<$filter\+\_\+list.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a6740dd4bfc659afb2791c0e5fcc3fdf2}\label{classlakoo_1_1_filter_list_a6740dd4bfc659afb2791c0e5fcc3fdf2}} 
+\hyperlink{classlakoo_1_1_filter_list_a6740dd4bfc659afb2791c0e5fcc3fdf2}{Filter\+List} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classlakoo_1_1_filter_list_a664a64a5eab384a18d454348314ec9e8}{Filter\+List} (const std\+::list$<$ std\+::wstring $>$ \&list)
+\begin{DoxyCompactList}\small\item\em Constructor with a list of filter words. \end{DoxyCompactList}\item 
+\hyperlink{classlakoo_1_1_filter_list_aa1f55e47a7724168e3b5bce0dfdaa291}{Filter\+List} (const std\+::list$<$ std\+::string $>$ \&list)
+\item 
+\hyperlink{classlakoo_1_1_filter_list_a18339c4c41745f86651e0083794f8879}{Filter\+List} (const wchar\+\_\+t $\ast$const $\ast$list, std\+::size\+\_\+t count)
+\item 
+\hyperlink{classlakoo_1_1_filter_list_a6e3e186a19a2950ddd52cb2beddc09f7}{Filter\+List} (const char $\ast$const $\ast$list, std\+::size\+\_\+t count)
+\item 
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a86eec96a1833204a59bff71ebd32949d}\label{classlakoo_1_1_filter_list_a86eec96a1833204a59bff71ebd32949d}} 
+\hyperlink{classlakoo_1_1_filter_list_a86eec96a1833204a59bff71ebd32949d}{$\sim$\+Filter\+List} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a0544da11a6c0f98bff84a8ec6edfc385}\label{classlakoo_1_1_filter_list_a0544da11a6c0f98bff84a8ec6edfc385}} 
+\hyperlink{classlakoo_1_1_filter_list_a0544da11a6c0f98bff84a8ec6edfc385}{Filter\+List} (const \hyperlink{classlakoo_1_1_filter_list}{Filter\+List} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_adfcc14545ca836f63d7de211fce59ed4}\label{classlakoo_1_1_filter_list_adfcc14545ca836f63d7de211fce59ed4}} 
+\hyperlink{classlakoo_1_1_filter_list}{Filter\+List} \& \hyperlink{classlakoo_1_1_filter_list_adfcc14545ca836f63d7de211fce59ed4}{operator=} (const \hyperlink{classlakoo_1_1_filter_list}{Filter\+List} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted assignment operator. \end{DoxyCompactList}\item 
+void \hyperlink{classlakoo_1_1_filter_list_a7e2d437ce3f04b8e3bd716c65539d8a5}{add} (const std\+::wstring \&str)
+\begin{DoxyCompactList}\small\item\em To add a word to the list. \end{DoxyCompactList}\item 
+void \hyperlink{classlakoo_1_1_filter_list_aa5a478b5f4bdd0b887a30033f2de9005}{add} (const std\+::string \&str)
+\item 
+void \hyperlink{classlakoo_1_1_filter_list_afa7823ad250d1d8b413f6b8e03628ab1}{add} (const wchar\+\_\+t $\ast$str)
+\item 
+void \hyperlink{classlakoo_1_1_filter_list_a18832d0651232414540a844e603e8f82}{add} (const char $\ast$str)
+\item 
+void \hyperlink{classlakoo_1_1_filter_list_ac7e57e54deb4c41f5865734671ca5f12}{add} (const std\+::list$<$ std\+::wstring $>$ \&list)
+\begin{DoxyCompactList}\small\item\em To add a list of words to the list. \end{DoxyCompactList}\item 
+void \hyperlink{classlakoo_1_1_filter_list_ae4b7da9839649af588d682d63feb5e97}{add} (const std\+::list$<$ std\+::string $>$ \&list)
+\item 
+void \hyperlink{classlakoo_1_1_filter_list_abe0dd9734dfbbac5127d5bddfaf014c4}{add} (const wchar\+\_\+t $\ast$const $\ast$list, std\+::size\+\_\+t count)
+\item 
+void \hyperlink{classlakoo_1_1_filter_list_aedc65b86f12419f9308f669751c5788a}{add} (const char $\ast$const $\ast$list, std\+::size\+\_\+t count)
+\item 
+std\+::list$<$ \hyperlink{structlakoo_1_1_word_segment}{Word\+Segment} $>$ \hyperlink{classlakoo_1_1_filter_list_a94847c238bf5f7275d858c4942e1ba78}{find} (const std\+::wstring \&str) const
+\begin{DoxyCompactList}\small\item\em To find all word segments to filter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Store the list of words to filter. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a664a64a5eab384a18d454348314ec9e8}\label{classlakoo_1_1_filter_list_a664a64a5eab384a18d454348314ec9e8}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!Filter\+List@{Filter\+List}}
+\index{Filter\+List@{Filter\+List}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{Filter\+List()}{FilterList()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Filter\+List\+::\+Filter\+List (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::wstring $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor with a list of filter words. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & The list of std\+::wstring to filter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_aa1f55e47a7724168e3b5bce0dfdaa291}\label{classlakoo_1_1_filter_list_aa1f55e47a7724168e3b5bce0dfdaa291}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!Filter\+List@{Filter\+List}}
+\index{Filter\+List@{Filter\+List}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{Filter\+List()}{FilterList()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Filter\+List\+::\+Filter\+List (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & The list of std\+::string to filter. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a18339c4c41745f86651e0083794f8879}\label{classlakoo_1_1_filter_list_a18339c4c41745f86651e0083794f8879}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!Filter\+List@{Filter\+List}}
+\index{Filter\+List@{Filter\+List}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{Filter\+List()}{FilterList()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Filter\+List\+::\+Filter\+List (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$const $\ast$}]{list,  }\item[{std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & An array of wchar\+\_\+t string to filter. \\
+\hline
+\mbox{\tt in}  & {\em count} & The number of words in the list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a6e3e186a19a2950ddd52cb2beddc09f7}\label{classlakoo_1_1_filter_list_a6e3e186a19a2950ddd52cb2beddc09f7}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!Filter\+List@{Filter\+List}}
+\index{Filter\+List@{Filter\+List}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{Filter\+List()}{FilterList()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Filter\+List\+::\+Filter\+List (\begin{DoxyParamCaption}\item[{const char $\ast$const $\ast$}]{list,  }\item[{std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & An array of char string to filter. \\
+\hline
+\mbox{\tt in}  & {\em count} & The number of words in the list. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a7e2d437ce3f04b8e3bd716c65539d8a5}\label{classlakoo_1_1_filter_list_a7e2d437ce3f04b8e3bd716c65539d8a5}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str }\end{DoxyParamCaption})}
+
+
+
+To add a word to the list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::wstring to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_aa5a478b5f4bdd0b887a30033f2de9005}\label{classlakoo_1_1_filter_list_aa5a478b5f4bdd0b887a30033f2de9005}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::string to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_afa7823ad250d1d8b413f6b8e03628ab1}\label{classlakoo_1_1_filter_list_afa7823ad250d1d8b413f6b8e03628ab1}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{str }\end{DoxyParamCaption})}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The wchar\+\_\+t string to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a18832d0651232414540a844e603e8f82}\label{classlakoo_1_1_filter_list_a18832d0651232414540a844e603e8f82}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The char string to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_ac7e57e54deb4c41f5865734671ca5f12}\label{classlakoo_1_1_filter_list_ac7e57e54deb4c41f5865734671ca5f12}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::wstring $>$ \&}]{list }\end{DoxyParamCaption})}
+
+
+
+To add a list of words to the list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & The list of std\+::wstring to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_ae4b7da9839649af588d682d63feb5e97}\label{classlakoo_1_1_filter_list_ae4b7da9839649af588d682d63feb5e97}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const std\+::list$<$ std\+::string $>$ \&}]{list }\end{DoxyParamCaption})}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & The list of std\+::string to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_abe0dd9734dfbbac5127d5bddfaf014c4}\label{classlakoo_1_1_filter_list_abe0dd9734dfbbac5127d5bddfaf014c4}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$const $\ast$}]{list,  }\item[{std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & The list of wchar\+\_\+t shring to add. \\
+\hline
+\mbox{\tt in}  & {\em count} & The number of words in the list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_aedc65b86f12419f9308f669751c5788a}\label{classlakoo_1_1_filter_list_aedc65b86f12419f9308f669751c5788a}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!add@{add}}
+\index{add@{add}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
+{\footnotesize\ttfamily void Filter\+List\+::add (\begin{DoxyParamCaption}\item[{const char $\ast$const $\ast$}]{list,  }\item[{std\+::size\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em list} & The list of char string to add. \\
+\hline
+\mbox{\tt in}  & {\em count} & The number of words in the list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_filter_list_a94847c238bf5f7275d858c4942e1ba78}\label{classlakoo_1_1_filter_list_a94847c238bf5f7275d858c4942e1ba78}} 
+\index{lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}!find@{find}}
+\index{find@{find}!lakoo\+::\+Filter\+List@{lakoo\+::\+Filter\+List}}
+\subsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily std\+::list$<$ \hyperlink{structlakoo_1_1_word_segment}{Word\+Segment} $>$ Filter\+List\+::find (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str }\end{DoxyParamCaption}) const}
+
+
+
+To find all word segments to filter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::wstring to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of word segments to filter. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{filter__list_8h}{filter\+\_\+list.\+h}\item 
+src/\hyperlink{filter__list_8cpp}{filter\+\_\+list.\+cpp}\end{DoxyCompactItemize}

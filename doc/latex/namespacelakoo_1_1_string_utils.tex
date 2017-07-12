@@ -1,0 +1,210 @@
+\hypertarget{namespacelakoo_1_1_string_utils}{}\section{lakoo\+:\+:String\+Utils Namespace Reference}
+\label{namespacelakoo_1_1_string_utils}\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+
+
+String utilities.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::wstring \hyperlink{namespacelakoo_1_1_string_utils_ad236af80219ed789fd57d59cc2a380e7}{replace} (std\+::wstring str, const std\+::wstring \&from, const std\+::wstring \&to)
+\begin{DoxyCompactList}\small\item\em Replace all matched word in the given string. \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{namespacelakoo_1_1_string_utils_a102713d4f3bf83005f55de27a66d74df}{trim} (const std\+::wstring \&str)
+\begin{DoxyCompactList}\small\item\em Trim whitespaces from left and right to the given string. \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{namespacelakoo_1_1_string_utils_a990f13aaad5f2b94f4999b435bdc2be9}{to\+Lower\+Case} (std\+::wstring str)
+\begin{DoxyCompactList}\small\item\em Transform the given string to lower case. \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{namespacelakoo_1_1_string_utils_a24ac7b7c2b78ae88065b47ca076a05bc}{str\+To\+W\+Str} (const std\+::string \&str)
+\begin{DoxyCompactList}\small\item\em Convert std\+::string to std\+::wstring. \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{namespacelakoo_1_1_string_utils_abdaf50b4fed2e6f736df9aa735a4ac09}{c\+Str\+To\+W\+Str} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Convert char string to std\+::wstring. \end{DoxyCompactList}\item 
+const wchar\+\_\+t $\ast$ \hyperlink{namespacelakoo_1_1_string_utils_aea1ebb73b8aa4f817d1473900cf16c29}{c\+Str\+To\+Wc\+Str} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Convert char string to wchar\+\_\+t string. \end{DoxyCompactList}\item 
+void \hyperlink{namespacelakoo_1_1_string_utils_a84da50c47fed24d0b4a467b84c5e2c7d}{free\+Wc\+Str} (const wchar\+\_\+t $\ast$str)
+\begin{DoxyCompactList}\small\item\em Free the wchar\+\_\+t string. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{namespacelakoo_1_1_string_utils_ac5f5ff19cad730bfb33924cd6cd8da15}{w\+Str\+To\+Str} (const std\+::wstring \&str)
+\begin{DoxyCompactList}\small\item\em Convert std\+::wstring to std\+::string. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{namespacelakoo_1_1_string_utils_a13b1c55460bae1b1ebbab0164ebe722b}{wc\+Str\+To\+C\+Str} (const wchar\+\_\+t $\ast$str)
+\begin{DoxyCompactList}\small\item\em Convert wchar\+\_\+t string to char string. \end{DoxyCompactList}\item 
+void \hyperlink{namespacelakoo_1_1_string_utils_aba915091fd9f6cc45a2720c936e3a680}{free\+C\+Str} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Free the char string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+String utilities. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_ad236af80219ed789fd57d59cc2a380e7}\label{namespacelakoo_1_1_string_utils_ad236af80219ed789fd57d59cc2a380e7}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!replace@{replace}}
+\index{replace@{replace}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{replace()}{replace()}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+String\+Utils\+::replace (\begin{DoxyParamCaption}\item[{std\+::wstring}]{str,  }\item[{const std\+::wstring \&}]{from,  }\item[{const std\+::wstring \&}]{to }\end{DoxyParamCaption})}
+
+
+
+Replace all matched word in the given string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The string to replace. \\
+\hline
+\mbox{\tt in}  & {\em from} & The word to match. \\
+\hline
+\mbox{\tt in}  & {\em to} & The replacing word. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The replaced string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_a102713d4f3bf83005f55de27a66d74df}\label{namespacelakoo_1_1_string_utils_a102713d4f3bf83005f55de27a66d74df}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!trim@{trim}}
+\index{trim@{trim}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+String\+Utils\+::trim (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Trim whitespaces from left and right to the given string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The string to trim. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trimmed string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_a990f13aaad5f2b94f4999b435bdc2be9}\label{namespacelakoo_1_1_string_utils_a990f13aaad5f2b94f4999b435bdc2be9}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!to\+Lower\+Case@{to\+Lower\+Case}}
+\index{to\+Lower\+Case@{to\+Lower\+Case}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{to\+Lower\+Case()}{toLowerCase()}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+String\+Utils\+::to\+Lower\+Case (\begin{DoxyParamCaption}\item[{std\+::wstring}]{str }\end{DoxyParamCaption})}
+
+
+
+Transform the given string to lower case. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The string to transform. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The transformed string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_a24ac7b7c2b78ae88065b47ca076a05bc}\label{namespacelakoo_1_1_string_utils_a24ac7b7c2b78ae88065b47ca076a05bc}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!str\+To\+W\+Str@{str\+To\+W\+Str}}
+\index{str\+To\+W\+Str@{str\+To\+W\+Str}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{str\+To\+W\+Str()}{strToWStr()}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+String\+Utils\+::str\+To\+W\+Str (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Convert std\+::string to std\+::wstring. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_abdaf50b4fed2e6f736df9aa735a4ac09}\label{namespacelakoo_1_1_string_utils_abdaf50b4fed2e6f736df9aa735a4ac09}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!c\+Str\+To\+W\+Str@{c\+Str\+To\+W\+Str}}
+\index{c\+Str\+To\+W\+Str@{c\+Str\+To\+W\+Str}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{c\+Str\+To\+W\+Str()}{cStrToWStr()}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+String\+Utils\+::c\+Str\+To\+W\+Str (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Convert char string to std\+::wstring. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The char string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_aea1ebb73b8aa4f817d1473900cf16c29}\label{namespacelakoo_1_1_string_utils_aea1ebb73b8aa4f817d1473900cf16c29}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!c\+Str\+To\+Wc\+Str@{c\+Str\+To\+Wc\+Str}}
+\index{c\+Str\+To\+Wc\+Str@{c\+Str\+To\+Wc\+Str}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{c\+Str\+To\+Wc\+Str()}{cStrToWcStr()}}
+{\footnotesize\ttfamily const wchar\+\_\+t $\ast$ lakoo\+::\+String\+Utils\+::c\+Str\+To\+Wc\+Str (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Convert char string to wchar\+\_\+t string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The char string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string, must be freed with \hyperlink{namespacelakoo_1_1_string_utils_a84da50c47fed24d0b4a467b84c5e2c7d}{free\+Wc\+Str(const wchar\+\_\+t$\ast$)}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_a84da50c47fed24d0b4a467b84c5e2c7d}\label{namespacelakoo_1_1_string_utils_a84da50c47fed24d0b4a467b84c5e2c7d}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!free\+Wc\+Str@{free\+Wc\+Str}}
+\index{free\+Wc\+Str@{free\+Wc\+Str}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{free\+Wc\+Str()}{freeWcStr()}}
+{\footnotesize\ttfamily void lakoo\+::\+String\+Utils\+::free\+Wc\+Str (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Free the wchar\+\_\+t string. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacelakoo_1_1_string_utils_aea1ebb73b8aa4f817d1473900cf16c29}{c\+Str\+To\+Wc\+Str(const char$\ast$)} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_ac5f5ff19cad730bfb33924cd6cd8da15}\label{namespacelakoo_1_1_string_utils_ac5f5ff19cad730bfb33924cd6cd8da15}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!w\+Str\+To\+Str@{w\+Str\+To\+Str}}
+\index{w\+Str\+To\+Str@{w\+Str\+To\+Str}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{w\+Str\+To\+Str()}{wStrToStr()}}
+{\footnotesize\ttfamily std\+::string lakoo\+::\+String\+Utils\+::w\+Str\+To\+Str (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Convert std\+::wstring to std\+::string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::wstring to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_a13b1c55460bae1b1ebbab0164ebe722b}\label{namespacelakoo_1_1_string_utils_a13b1c55460bae1b1ebbab0164ebe722b}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!wc\+Str\+To\+C\+Str@{wc\+Str\+To\+C\+Str}}
+\index{wc\+Str\+To\+C\+Str@{wc\+Str\+To\+C\+Str}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{wc\+Str\+To\+C\+Str()}{wcStrToCStr()}}
+{\footnotesize\ttfamily const char $\ast$ lakoo\+::\+String\+Utils\+::wc\+Str\+To\+C\+Str (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Convert wchar\+\_\+t string to char string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The wchar\+\_\+t string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The converted string, must be freed with \hyperlink{namespacelakoo_1_1_string_utils_aba915091fd9f6cc45a2720c936e3a680}{free\+C\+Str(const char$\ast$)}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespacelakoo_1_1_string_utils_aba915091fd9f6cc45a2720c936e3a680}\label{namespacelakoo_1_1_string_utils_aba915091fd9f6cc45a2720c936e3a680}} 
+\index{lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}!free\+C\+Str@{free\+C\+Str}}
+\index{free\+C\+Str@{free\+C\+Str}!lakoo\+::\+String\+Utils@{lakoo\+::\+String\+Utils}}
+\subsubsection{\texorpdfstring{free\+C\+Str()}{freeCStr()}}
+{\footnotesize\ttfamily void lakoo\+::\+String\+Utils\+::free\+C\+Str (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+Free the char string. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{namespacelakoo_1_1_string_utils_a13b1c55460bae1b1ebbab0164ebe722b}{wc\+Str\+To\+C\+Str(const wchar\+\_\+t$\ast$)} 
+\end{DoxySeeAlso}
