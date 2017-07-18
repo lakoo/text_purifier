@@ -1,4 +1,4 @@
-# Text Purifier (0.8.1)
+# Text Purifier (0.8.2)
 
 - [Introduction](#introduction)
 - [Compilation](#compilation)

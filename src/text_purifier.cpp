@@ -35,7 +35,7 @@ using namespace std;
 
 
 TextPurifier::TextPurifier()
-: _filterList(unique_ptr<FilterList>())
+: _filterList(unique_ptr<FilterList>(new FilterList()))
 {
 }
 
