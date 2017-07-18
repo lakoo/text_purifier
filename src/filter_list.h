@@ -169,6 +169,6 @@ namespace lakoo
         //! The root CharNode of the filter list.
         std::shared_ptr<CharNode> _root;
     };
-}; // namespace lakoo
+} // namespace lakoo
 
 #endif // __LAKOO_FILTER_LIST_H__

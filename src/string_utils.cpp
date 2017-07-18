@@ -25,8 +25,10 @@
 
 #include "string_utils.h"
 
+#include <algorithm>
 #include <clocale>
 #include <cstdlib>
+#include <cstring>
 
 
 using namespace lakoo;

@@ -59,6 +59,10 @@ TextPurifier::TextPurifier(const char* const* list, std::size_t count)
 {
 }
 
+TextPurifier::~TextPurifier()
+{
+}
+
 void TextPurifier::add(const std::wstring& str)
 {
     _filterList->add(str);

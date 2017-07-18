@@ -1,18 +1,21 @@
 CC=g++
 AR=ar
+CHECK=cppcheck
 INCLUDE_DIR=include
 CPPFLAGS=-I$(INCLUDE_DIR) -std=gnu++11 -Wpedantic -Wall -Wextra -Werror -O2
-LDFLAGS=-L.
-ARFLAGS=-cr
-SRC=$(wildcard src/*.cpp)
+LDFLAGS=
+ARFLAGS=-rcs
+CHECKFLAGS=-I $(INCLUDE_DIR) -i test --quiet --force --std=c++11 --enable=all --error-exitcode=1 --suppress=missingIncludeSystem
+SRC_DIR=src
+SRC=$(wildcard $(SRC_DIR)/*.cpp)
 BIN_DIR=bin
 STATIC_TARGET=$(BIN_DIR)/libtextpurifier.a
 STATIC_DIR=build_static
-STATIC_OBJ=$(SRC:src/%.cpp=$(STATIC_DIR)/%.o)
+STATIC_OBJ=$(SRC:$(SRC_DIR)/%.cpp=$(STATIC_DIR)/%.o)
 STATIC_DEPS=$(STATIC_OBJ:%.o=%.d)
 SHARED_TARGET=$(BIN_DIR)/libtextpurifier.so
 SHARED_DIR=build_shared
-SHARED_OBJ=$(SRC:src/%.cpp=$(SHARED_DIR)/%.o)
+SHARED_OBJ=$(SRC:$(SRC_DIR)/%.cpp=$(SHARED_DIR)/%.o)
 SHARED_DEPS=$(SHARED_OBJ:%.o=%.d)
 
 .PHONY: all static shared doc clean
@@ -24,25 +27,24 @@ static: $(STATIC_TARGET)
 shared: $(SHARED_TARGET)
 
 $(STATIC_TARGET): $(STATIC_OBJ) | $(BIN_DIR)
+	$(CHECK) $(CHECKFLAGS) .
 	$(AR) $(ARFLAGS) $@ $^
 
 $(SHARED_TARGET): CPPFLAGS+=-fPIC
 $(SHARED_TARGET): LDFLAGS+=-shared
 $(SHARED_TARGET): $(SHARED_OBJ) | $(BIN_DIR)
-	$(CC) $(LDFLAGS) $^ -o $@
+	$(CHECK) $(CHECKFLAGS) .
+	$(CC) -o $@ $(LDFLAGS) $^
 
 -include $(STATIC_DEPS)
-$(STATIC_DIR)/%.o: src/%.cpp | $(STATIC_DIR)
+$(STATIC_DIR)/%.o: $(SRC_DIR)/%.cpp | $(STATIC_DIR)
 	$(CC) $(CPPFLAGS) -MMD -o $@ -c $<
 
 -include $(SHARED_DEPS)
-$(SHARED_DIR)/%.o: src/%.cpp | $(SHARED_DIR)
+$(SHARED_DIR)/%.o: $(SRC_DIR)/%.cpp | $(SHARED_DIR)
 	$(CC) $(CPPFLAGS) -MMD -o $@ -c $<
 
-$(STATIC_DIR) $(SHARED_DIR):
-	@mkdir $@
-
-$(BIN_DIR):
+$(STATIC_DIR) $(SHARED_DIR) $(BIN_DIR):
 	@mkdir $@
 
 doc:

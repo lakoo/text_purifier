@@ -53,7 +53,7 @@ namespace lakoo
         /**
          * @param [in] character The character for the node.
          */
-        CharNode(wchar_t character);
+        explicit CharNode(wchar_t character);
 
         //! Destructor.
         ~CharNode();
@@ -110,6 +110,6 @@ namespace lakoo
         //! The container to store the next CharNode.
         CharMap _next;
     };
-}; // namespace lakoo
+} // namespace lakoo
 
 #endif // __LAKOO_CHAR_NODE_H__

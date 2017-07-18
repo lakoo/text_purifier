@@ -103,7 +103,7 @@ namespace lakoo
          * @sa wcStrToCStr(const wchar_t*)
          */
         void freeCStr(const char* str);
-    };
-};
+    } // namespace StringUtils
+} // namespace lakoo
 
 #endif // __LAKOO_STRING_UTILS_H__

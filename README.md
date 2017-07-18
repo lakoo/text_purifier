@@ -1,9 +1,14 @@
-# Text Purifier (0.8.0)
+# Text Purifier (0.8.1)
 
+- [Introduction](#introduction)
 - [Compilation](#compilation)
   - [Static Library](#static-library)
   - [Shared Library](#shared-library)
 - [License](#license)
+
+## Introduction
+
+This is a C++ library for purifying text from a list of words.  It supports UTF-8 string (std::wstirng, std::string, wchar_t\*, char\*).
 
 ## Compilation
 

@@ -25,6 +25,8 @@
 
 #include "filter_list.h"
 
+#include <limits>
+
 #include "char_node.h"
 #include "string_utils.h"
 

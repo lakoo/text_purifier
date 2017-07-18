@@ -1,0 +1,44 @@
+
+\begin{DoxyItemize}
+\item \href{#introduction}{\tt Introduction}
+\item \href{#compilation}{\tt Compilation}
+\begin{DoxyItemize}
+\item \href{#static-library}{\tt Static Library}
+\item \href{#shared-library}{\tt Shared Library}
+\end{DoxyItemize}
+\item \href{#license}{\tt License}
+\end{DoxyItemize}
+
+\subsection*{Introduction}
+
+This is a C++ library for purifying text from a list of words. It supports U\+T\+F-\/8 string (std\+::wstirng, std\+::string, wchar\+\_\+t$\ast$, char$\ast$).
+
+\subsection*{Compilation}
+
+\subsubsection*{Static Library}
+
+To compile static library (.a)\+: 
+\begin{DoxyCode}
+git clone https://github.com/lakoo/text\_purifier.git
+cd text\_purifier
+make static
+\end{DoxyCode}
+
+
+The static library is located at {\ttfamily bin/libtextpurifier.\+a}.
+
+\subsubsection*{Shared Library}
+
+To compile shared library (.so)\+: 
+\begin{DoxyCode}
+git clone https://github.com/lakoo/text\_purifier.git
+cd text\_purifier
+make shared
+\end{DoxyCode}
+
+
+The shared library is located at {\ttfamily bin/libtextpurifier.\+so}.
+
+\subsection*{License}
+
+This software is licensed under the \href{https://www.gnu.org/copyleft/lgpl.html}{\tt G\+NU Lesser G\+PL v3 license}. © 2017 Lakoo Games Limited 

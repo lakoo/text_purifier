@@ -34,7 +34,7 @@
 //! The namespace for Lakoo library.
 namespace lakoo
 {
-    class FilterList;;
+    class FilterList;
 
 
     //! To purify text by given list of strings.
@@ -44,7 +44,6 @@ namespace lakoo
         //! Default constructor.
         TextPurifier();
 
-        //
         //! Constructor with a list of filter words.
         /**
          * @param [in] list The list of std::wstring to purify.
@@ -71,8 +70,8 @@ namespace lakoo
          */
         explicit TextPurifier(const char* const* list, std::size_t count);
 
-        //! Default destructor.
-        ~TextPurifier() = default;
+        //! Destructor.
+        ~TextPurifier();
 
         //! Deleted copy constructor.
         TextPurifier(const TextPurifier&) = delete;
@@ -255,6 +254,6 @@ namespace lakoo
         //! The filter list for purifying words.
         std::unique_ptr<FilterList> _filterList;
     };
-}; // namespace lakoo
+} // namespace lakoo
 
 #endif // __LAKOO_TEXT_PURIFIER_H__
