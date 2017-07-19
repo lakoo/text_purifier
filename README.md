@@ -1,4 +1,4 @@
-# Text Purifier (0.8.2)
+# Text Purifier (0.8.3)
 
 - [Introduction](#introduction)
 - [Compilation](#compilation)
@@ -19,6 +19,7 @@ To compile static library (.a):
 git clone https://github.com/lakoo/text_purifier.git
 cd text_purifier
 make static
+make install
 ```
 
 The static library is located at `bin/libtextpurifier.a`.
@@ -30,6 +31,7 @@ To compile shared library (.so):
 git clone https://github.com/lakoo/text_purifier.git
 cd text_purifier
 make shared
+make install
 ```
 
 The shared library is located at `bin/libtextpurifier.so`.

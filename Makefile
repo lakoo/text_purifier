@@ -1,11 +1,13 @@
 CC=g++
 AR=ar
 CHECK=cppcheck
+INSTALL=install
 INCLUDE_DIR=include
 CPPFLAGS=-I$(INCLUDE_DIR) -std=gnu++11 -Wpedantic -Wall -Wextra -Werror -O2
 LDFLAGS=
 ARFLAGS=-rcs
 CHECKFLAGS=-I $(INCLUDE_DIR) -i test --quiet --force --std=c++11 --enable=all --error-exitcode=1 --suppress=missingIncludeSystem
+INCLUDE=$(wildcard $(INCLUDE_DIR)/*.h)
 SRC_DIR=src
 SRC=$(wildcard $(SRC_DIR)/*.cpp)
 BIN_DIR=bin
@@ -17,8 +19,9 @@ SHARED_TARGET=$(BIN_DIR)/libtextpurifier.so
 SHARED_DIR=build_shared
 SHARED_OBJ=$(SRC:$(SRC_DIR)/%.cpp=$(SHARED_DIR)/%.o)
 SHARED_DEPS=$(SHARED_OBJ:%.o=%.d)
+PREFIX?=/usr/local
 
-.PHONY: all static shared doc clean
+.PHONY: all static shared install uninstall doc clean
 
 all: static shared
 
@@ -46,6 +49,26 @@ $(SHARED_DIR)/%.o: $(SRC_DIR)/%.cpp | $(SHARED_DIR)
 
 $(STATIC_DIR) $(SHARED_DIR) $(BIN_DIR):
 	@mkdir $@
+
+install:
+	@if [ -f "$(STATIC_TARGET)" ]; then \
+		echo "Installing $(STATIC_TARGET) ..."; \
+		$(INSTALL) $(STATIC_TARGET) $(PREFIX)/lib; \
+	fi
+	@if [ -f "$(SHARED_TARGET)" ]; then \
+		echo "Installing $(SHARED_TARGET) ..."; \
+		$(INSTALL) $(SHARED_TARGET) $(PREFIX)/lib; \
+	fi
+	@if [ -f "$(STATIC_TARGET)" ] || [ -f "$(SHARED_TARGET)" ]; then \
+		echo "Installing headers ..."; \
+		$(INSTALL) $(INCLUDE) $(PREFIX)/include; \
+	fi
+
+uninstall:
+	@echo "Uninstalling ..."
+	@rm -f $(STATIC_TARGET:$(BIN_DIR)/%=$(PREFIX)/lib/%)
+	@rm -f $(SHARED_TARGET:$(BIN_DIR)/%=$(PREFIX)/lib/%)
+	@rm -f $(INCLUDE:$(INCLUDE_DIR)/%.h=$(PREFIX)/include/%.h)
 
 doc:
 	@echo "Generating document ..."
