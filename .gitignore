@@ -2,7 +2,32 @@
 *.sw?
 .ycm_extra_conf.py
 
+# autotools
+aclocal.m4
+autom4te.cache/
+autoscan.log
+compile
+config.guess
+config.h
+config.h.in
+config.h.in~
+config.log
+config.status
+config.sub
+configure
+configure.scan
+depcomp
+install-sh
+libtool
+ltmain.sh
+Makefile
+Makefile.in
+missing
+stamp-h1
+
 # make
-bin/
-build_static/
-build_shared/
+.deps/
+.libs/
+*.la
+*.lo
+*.o

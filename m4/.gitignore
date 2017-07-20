@@ -1,0 +1,5 @@
+# autotools
+*
+!.gitignore
+!ax_cxx_compile_stdcxx.m4
+!ax_cxx_compile_stdcxx_11.m4
