@@ -50,9 +50,9 @@ std::wstring StringUtils::replace(std::wstring str, const std::wstring& from, co
 std::wstring StringUtils::trim(const std::wstring& str)
 {
     const wstring blank = L"\r\n\t ";
+    const size_t begin = str.find_first_not_of(blank);
+    const size_t end = str.find_last_not_of(blank);
 
-    size_t begin = str.find_first_not_of(blank);
-    size_t end = str.find_last_not_of(blank);
     if(wstring::npos != begin || wstring::npos != end)
     {
         return str.substr(begin, end - begin + 1UL);
@@ -85,14 +85,14 @@ std::wstring StringUtils::cStrToWStr(const char* str)
 
 const wchar_t* StringUtils::cStrToWcStr(const char* str)
 {
-    string currentLocale = setlocale(LC_ALL, "C.UTF-8");
+    const char* const currentLocale = setlocale(LC_ALL, "C.UTF-8");
+    const size_t size = mbstowcs(nullptr, str, 0UL) + 1UL;
 
-    size_t size = mbstowcs(nullptr, str, 0UL) + 1UL;
     wchar_t* wcStr = new wchar_t[size];
     wmemset(wcStr, 0, size);
     mbstowcs(wcStr, str, size);
 
-    setlocale(LC_ALL, currentLocale.c_str());
+    setlocale(LC_ALL, currentLocale);
     return wcStr;
 }
 
@@ -115,14 +115,14 @@ std::string StringUtils::wStrToStr(const std::wstring& str)
 
 const char* StringUtils::wcStrToCStr(const wchar_t* str)
 {
-    string currentLocale = setlocale(LC_ALL, "C.UTF-8");
+    const char* const currentLocale = setlocale(LC_ALL, "C.UTF-8");
+    const size_t size = wcstombs(nullptr, str, 0UL) + 1UL;
 
-    size_t size = wcstombs(nullptr, str, 0UL) + 1UL;
     char* cStr = new char[size];
     memset(cStr, 0, size);
     wcstombs(cStr, str, size);
 
-    setlocale(LC_ALL, currentLocale.c_str());
+    setlocale(LC_ALL, currentLocale);
     return cStr;
 }
 
