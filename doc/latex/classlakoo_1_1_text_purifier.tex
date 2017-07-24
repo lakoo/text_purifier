@@ -48,8 +48,14 @@ void \hyperlink{classlakoo_1_1_text_purifier_a18c9fc28060bb7e75dfcd88a277a2cbb}{
 \item 
 void \hyperlink{classlakoo_1_1_text_purifier_a83426de858f38e94d5d48426cdc41149}{add} (const char $\ast$const $\ast$list, std\+::size\+\_\+t count)
 \item 
-std\+::wstring \& \hyperlink{classlakoo_1_1_text_purifier_a03abdabf613ea26d01a1643297660a82}{purify} (std\+::wstring \&str, const std\+::wstring \&mask) const
+std\+::wstring \hyperlink{classlakoo_1_1_text_purifier_ad4fc4eb008beecfeccafd7e1cf438df8}{purify} (const std\+::wstring \&str, const std\+::wstring \&mask) const
 \begin{DoxyCompactList}\small\item\em To purify the string with given mask. \end{DoxyCompactList}\item 
+std\+::wstring \hyperlink{classlakoo_1_1_text_purifier_aada61af13cc9f7c6a80b981dd200fc8a}{purify} (const std\+::wstring \&str, const wchar\+\_\+t $\ast$mask) const
+\item 
+std\+::wstring \hyperlink{classlakoo_1_1_text_purifier_a7976290c72112aa08b0c274df267ab80}{purify} (const std\+::wstring \&str, wchar\+\_\+t mask, bool is\+Match\+Size) const
+\item 
+std\+::wstring \& \hyperlink{classlakoo_1_1_text_purifier_a03abdabf613ea26d01a1643297660a82}{purify} (std\+::wstring \&str, const std\+::wstring \&mask) const
+\item 
 std\+::wstring \& \hyperlink{classlakoo_1_1_text_purifier_a24a12d550199c8402081eed59a5deab7}{purify} (std\+::wstring \&str, const wchar\+\_\+t $\ast$mask) const
 \item 
 std\+::wstring \& \hyperlink{classlakoo_1_1_text_purifier_a8d1dab81e72c89cab2c991eab08dcffe}{purify} (std\+::wstring \&str, wchar\+\_\+t mask, bool is\+Match\+Size) const
@@ -59,6 +65,12 @@ std\+::string \hyperlink{classlakoo_1_1_text_purifier_a9c8a9f7009fa673e49999a957
 std\+::string \hyperlink{classlakoo_1_1_text_purifier_a40382e6a751509a4c3737044fd06c93e}{purify} (const std\+::string \&str, const char $\ast$mask) const
 \item 
 std\+::string \hyperlink{classlakoo_1_1_text_purifier_a5e47d8d8bce3c6d3c34d13d43009e100}{purify} (const std\+::string \&str, char mask, bool is\+Match\+Size) const
+\item 
+std\+::string \& \hyperlink{classlakoo_1_1_text_purifier_a7f42b3e77f1f0e76e641aabfb53a8fb0}{purify} (std\+::string \&str, const std\+::string \&mask) const
+\item 
+std\+::string \& \hyperlink{classlakoo_1_1_text_purifier_a3c141f3ac2e12b70b37436cbefa9c347}{purify} (std\+::string \&str, const char $\ast$mask) const
+\item 
+std\+::string \& \hyperlink{classlakoo_1_1_text_purifier_a8666a23427c503c2107ca4c3fe0c9100}{purify} (std\+::string \&str, char mask, bool is\+Match\+Size) const
 \item 
 const wchar\+\_\+t $\ast$ \hyperlink{classlakoo_1_1_text_purifier_aa17c1206115640f6f7556220639bdddc}{purify} (const wchar\+\_\+t $\ast$str, const wchar\+\_\+t $\ast$mask) const
 \begin{DoxyCompactList}\small\item\em To purify the string with given mask. \end{DoxyCompactList}\item 
@@ -241,11 +253,11 @@ This is an overloaded member function, provided for convenience. It differs from
 \mbox{\tt in}  & {\em count} & The number of words in the list. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classlakoo_1_1_text_purifier_a03abdabf613ea26d01a1643297660a82}\label{classlakoo_1_1_text_purifier_a03abdabf613ea26d01a1643297660a82}} 
+\mbox{\Hypertarget{classlakoo_1_1_text_purifier_ad4fc4eb008beecfeccafd7e1cf438df8}\label{classlakoo_1_1_text_purifier_ad4fc4eb008beecfeccafd7e1cf438df8}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [1/10]}}
-{\footnotesize\ttfamily std\+::wstring\& lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{str,  }\item[{const std\+::wstring \&}]{mask }\end{DoxyParamCaption}) const}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [1/16]}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str,  }\item[{const std\+::wstring \&}]{mask }\end{DoxyParamCaption}) const}
 
 
 
@@ -261,10 +273,54 @@ To purify the string with given mask.
 \begin{DoxyReturn}{Returns}
 The purified string. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classlakoo_1_1_text_purifier_aada61af13cc9f7c6a80b981dd200fc8a}\label{classlakoo_1_1_text_purifier_aada61af13cc9f7c6a80b981dd200fc8a}} 
+\index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
+\index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [2/16]}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str,  }\item[{const wchar\+\_\+t $\ast$}]{mask }\end{DoxyParamCaption}) const}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em str} & The std\+::wstring to purify. \\
+\hline
+\mbox{\tt in}  & {\em mask} & The wchar\+\_\+t string mask. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_text_purifier_a7976290c72112aa08b0c274df267ab80}\label{classlakoo_1_1_text_purifier_a7976290c72112aa08b0c274df267ab80}} 
+\index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
+\index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [3/16]}}
+{\footnotesize\ttfamily std\+::wstring lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const std\+::wstring \&}]{str,  }\item[{wchar\+\_\+t}]{mask,  }\item[{bool}]{is\+Match\+Size }\end{DoxyParamCaption}) const}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em str} & The std\+::wstring to purify. \\
+\hline
+\mbox{\tt in}  & {\em mask} & The wchar\+\_\+t mask. \\
+\hline
+\mbox{\tt in}  & {\em is\+Match\+Size} & If is\+Match\+Size is {\ttfamily true}, the mask will be repeated until the same size with the purified word. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_text_purifier_a03abdabf613ea26d01a1643297660a82}\label{classlakoo_1_1_text_purifier_a03abdabf613ea26d01a1643297660a82}} 
+\index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
+\index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [4/16]}}
+{\footnotesize\ttfamily std\+::wstring\& lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{str,  }\item[{const std\+::wstring \&}]{mask }\end{DoxyParamCaption}) const}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em str} & The std\+::wstring to purify. \\
+\hline
+\mbox{\tt in}  & {\em mask} & The std\+::wstring mask. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The purified string. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_a24a12d550199c8402081eed59a5deab7}\label{classlakoo_1_1_text_purifier_a24a12d550199c8402081eed59a5deab7}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [2/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [5/16]}}
 {\footnotesize\ttfamily std\+::wstring\& lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{str,  }\item[{const wchar\+\_\+t $\ast$}]{mask }\end{DoxyParamCaption}) const}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
@@ -277,7 +333,7 @@ This is an overloaded member function, provided for convenience. It differs from
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_a8d1dab81e72c89cab2c991eab08dcffe}\label{classlakoo_1_1_text_purifier_a8d1dab81e72c89cab2c991eab08dcffe}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [3/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [6/16]}}
 {\footnotesize\ttfamily std\+::wstring\& lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{std\+::wstring \&}]{str,  }\item[{wchar\+\_\+t}]{mask,  }\item[{bool}]{is\+Match\+Size }\end{DoxyParamCaption}) const}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
@@ -292,7 +348,7 @@ This is an overloaded member function, provided for convenience. It differs from
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_a9c8a9f7009fa673e49999a9575eac0cf}\label{classlakoo_1_1_text_purifier_a9c8a9f7009fa673e49999a9575eac0cf}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [4/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [7/16]}}
 {\footnotesize\ttfamily std\+::string lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{const std\+::string \&}]{mask }\end{DoxyParamCaption}) const}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
@@ -305,7 +361,7 @@ This is an overloaded member function, provided for convenience. It differs from
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_a40382e6a751509a4c3737044fd06c93e}\label{classlakoo_1_1_text_purifier_a40382e6a751509a4c3737044fd06c93e}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [5/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [8/16]}}
 {\footnotesize\ttfamily std\+::string lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{const char $\ast$}]{mask }\end{DoxyParamCaption}) const}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
@@ -318,8 +374,49 @@ This is an overloaded member function, provided for convenience. It differs from
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_a5e47d8d8bce3c6d3c34d13d43009e100}\label{classlakoo_1_1_text_purifier_a5e47d8d8bce3c6d3c34d13d43009e100}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [6/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [9/16]}}
 {\footnotesize\ttfamily std\+::string lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{char}]{mask,  }\item[{bool}]{is\+Match\+Size }\end{DoxyParamCaption}) const}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::string to purify. \\
+\hline
+\mbox{\tt in}  & {\em mask} & The char mask. \\
+\hline
+\mbox{\tt in}  & {\em is\+Match\+Size} & If is\+Match\+Size is {\ttfamily true}, the mask will be repeated until the same size with the purified word. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_text_purifier_a7f42b3e77f1f0e76e641aabfb53a8fb0}\label{classlakoo_1_1_text_purifier_a7f42b3e77f1f0e76e641aabfb53a8fb0}} 
+\index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
+\index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [10/16]}}
+{\footnotesize\ttfamily std\+::string\& lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str,  }\item[{const std\+::string \&}]{mask }\end{DoxyParamCaption}) const}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::string to purify. \\
+\hline
+\mbox{\tt in}  & {\em mask} & The std\+::string mask. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_text_purifier_a3c141f3ac2e12b70b37436cbefa9c347}\label{classlakoo_1_1_text_purifier_a3c141f3ac2e12b70b37436cbefa9c347}} 
+\index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
+\index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [11/16]}}
+{\footnotesize\ttfamily std\+::string\& lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str,  }\item[{const char $\ast$}]{mask }\end{DoxyParamCaption}) const}
+
+This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em str} & The std\+::string to purify. \\
+\hline
+\mbox{\tt in}  & {\em mask} & The char string mask. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlakoo_1_1_text_purifier_a8666a23427c503c2107ca4c3fe0c9100}\label{classlakoo_1_1_text_purifier_a8666a23427c503c2107ca4c3fe0c9100}} 
+\index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
+\index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [12/16]}}
+{\footnotesize\ttfamily std\+::string\& lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{std\+::string \&}]{str,  }\item[{char}]{mask,  }\item[{bool}]{is\+Match\+Size }\end{DoxyParamCaption}) const}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
 \begin{DoxyParams}[1]{Parameters}
@@ -333,7 +430,7 @@ This is an overloaded member function, provided for convenience. It differs from
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_aa17c1206115640f6f7556220639bdddc}\label{classlakoo_1_1_text_purifier_aa17c1206115640f6f7556220639bdddc}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [7/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [13/16]}}
 {\footnotesize\ttfamily const wchar\+\_\+t$\ast$ lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{str,  }\item[{const wchar\+\_\+t $\ast$}]{mask }\end{DoxyParamCaption}) const}
 
 
@@ -353,7 +450,7 @@ The purified string, must be free with \hyperlink{classlakoo_1_1_text_purifier_a
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_a87d4b9e6f1b4075ebfd582fae5ed50d1}\label{classlakoo_1_1_text_purifier_a87d4b9e6f1b4075ebfd582fae5ed50d1}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [8/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [14/16]}}
 {\footnotesize\ttfamily const wchar\+\_\+t$\ast$ lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const wchar\+\_\+t $\ast$}]{str,  }\item[{wchar\+\_\+t}]{mask,  }\item[{bool}]{is\+Match\+Size }\end{DoxyParamCaption}) const}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
@@ -383,7 +480,7 @@ To free the purified string from \hyperlink{classlakoo_1_1_text_purifier_aa17c12
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_aacd5ea50d3d7cb6e800e40252fbc617b}\label{classlakoo_1_1_text_purifier_aacd5ea50d3d7cb6e800e40252fbc617b}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [9/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [15/16]}}
 {\footnotesize\ttfamily const char$\ast$ lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{const char $\ast$}]{mask }\end{DoxyParamCaption}) const}
 
 
@@ -403,7 +500,7 @@ The purified string, must be free with \hyperlink{classlakoo_1_1_text_purifier_a
 \mbox{\Hypertarget{classlakoo_1_1_text_purifier_a6798b4b235afa57f83fd8cb0b6ed929d}\label{classlakoo_1_1_text_purifier_a6798b4b235afa57f83fd8cb0b6ed929d}} 
 \index{lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}!purify@{purify}}
 \index{purify@{purify}!lakoo\+::\+Text\+Purifier@{lakoo\+::\+Text\+Purifier}}
-\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [10/10]}}
+\subsubsection{\texorpdfstring{purify()}{purify()}\hspace{0.1cm}{\footnotesize\ttfamily [16/16]}}
 {\footnotesize\ttfamily const char$\ast$ lakoo\+::\+Text\+Purifier\+::purify (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str,  }\item[{char}]{mask,  }\item[{bool}]{is\+Match\+Size }\end{DoxyParamCaption}) const}
 
 This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 

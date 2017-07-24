@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([textpurifier], [0.8.5], [aludirk@lakoo.com], [textpurifier], [https://github.com/lakoo/text_purifier])
+AC_INIT([textpurifier], [0.8.6], [aludirk@lakoo.com], [textpurifier], [https://github.com/lakoo/text_purifier])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
 AC_CONFIG_HEADERS([config.h])

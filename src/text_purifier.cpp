@@ -103,6 +103,23 @@ void TextPurifier::add(const char* const* list, std::size_t count)
     _filterList->add(list, count);
 }
 
+std::wstring TextPurifier::purify(const std::wstring& str, const std::wstring& mask) const
+{
+    wstring result(str);
+    return purify(result, mask);
+}
+
+std::wstring TextPurifier::purify(const std::wstring& str, const wchar_t* mask) const
+{
+    return purify(str, wstring(mask));
+}
+
+std::wstring TextPurifier::purify(const std::wstring& str, wchar_t mask, bool isMatchSize) const
+{
+    wstring result(str);
+    return purify(result, mask, isMatchSize);
+}
+
 std::wstring& TextPurifier::purify(std::wstring& str, const std::wstring& mask) const
 {
     for(const WordSegment& segment : _filterList->find(str))
@@ -114,6 +131,7 @@ std::wstring& TextPurifier::purify(std::wstring& str, const std::wstring& mask) 
 
 std::wstring& TextPurifier::purify(std::wstring& str, const wchar_t* mask) const
 {
+    // cppcheck-suppress returnTempReference
     return purify(str, wstring(mask));
 }
 
@@ -129,6 +147,7 @@ std::wstring& TextPurifier::purify(std::wstring& str, wchar_t mask, bool isMatch
     }
     else
     {
+        // cppcheck-suppress returnTempReference
         return purify(str, wstring(1, mask));
     }
 }
@@ -159,6 +178,24 @@ std::string TextPurifier::purify(const std::string& str, char mask, bool isMatch
     {
         return purify(str, string(1, mask));
     }
+}
+
+std::string& TextPurifier::purify(std::string& str, const std::string& mask) const
+{
+    str = purify(const_cast<const string&>(str), mask);
+    return str;
+}
+
+std::string& TextPurifier::purify(std::string& str, const char* mask) const
+{
+    str = purify(const_cast<const string&>(str), string(mask));
+    return str;
+}
+
+std::string& TextPurifier::purify(std::string& str, char mask, bool isMatchSize) const
+{
+    str = purify(const_cast<const string&>(str), mask, isMatchSize);
+    return str;
 }
 
 const wchar_t* TextPurifier::purify(const wchar_t* str, const wchar_t* mask) const

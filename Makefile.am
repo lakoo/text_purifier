@@ -6,4 +6,4 @@ include_HEADERS = include/text_purifier.h
 
 .PHONY: cppcheck
 cppcheck:
-	cppcheck -I include -i test --quiet --force --std=c++11 --enable=all --error-exitcode=1 --suppress=missingIncludeSystem $(top_srcdir)
+	cppcheck -I include -i test --quiet --force --std=c++11 --enable=all --error-exitcode=1 --suppress=missingIncludeSystem --inline-suppr $(top_srcdir)

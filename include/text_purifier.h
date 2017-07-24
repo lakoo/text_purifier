@@ -136,6 +136,30 @@ namespace lakoo
          * @param [in]     mask The std::wstring mask.
          * @return              The purified string.
          */
+        std::wstring purify(const std::wstring& str, const std::wstring& mask) const;
+
+        /**
+         * @overload
+         * @param [in,out] str  The std::wstring to purify.
+         * @param [in]     mask The wchar_t string mask.
+         */
+        std::wstring purify(const std::wstring& str, const wchar_t* mask) const;
+
+        /**
+         * @overload
+         * @param [in,out] str         The std::wstring to purify.
+         * @param [in]     mask        The wchar_t mask.
+         * @param [in]     isMatchSize If isMatchSize is \c true, the mask will be repeated until
+         *                             the same size with the purified word.
+         */
+        std::wstring purify(const std::wstring& str, wchar_t mask, bool isMatchSize) const;
+
+        /**
+         * @overload
+         * @param [in,out] str  The std::wstring to purify.
+         * @param [in]     mask The std::wstring mask.
+         * @return              The purified string.
+         */
         std::wstring& purify(std::wstring& str, const std::wstring& mask) const;
 
         /**
@@ -176,6 +200,29 @@ namespace lakoo
          *                         same size with the purified word.
          */
         std::string purify(const std::string& str, char mask, bool isMatchSize) const;
+
+        /**
+         * @overload
+         * @param [in] str  The std::string to purify.
+         * @param [in] mask The std::string mask.
+         */
+        std::string& purify(std::string& str, const std::string& mask) const;
+
+        /**
+         * @overload
+         * @param [in] str  The std::string to purify.
+         * @param [in] mask The char string mask.
+         */
+        std::string& purify(std::string& str, const char* mask) const;
+
+        /**
+         * @overload
+         * @param [in] str         The std::string to purify.
+         * @param [in] mask        The char mask.
+         * @param [in] isMatchSize If isMatchSize is \c true, the mask will be repeated until the
+         *                         same size with the purified word.
+         */
+        std::string& purify(std::string& str, char mask, bool isMatchSize) const;
 
         //! To purify the string with given mask.
         /**
