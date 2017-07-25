@@ -122,9 +122,11 @@ std::wstring TextPurifier::purify(const std::wstring& str, wchar_t mask, bool is
 
 std::wstring& TextPurifier::purify(std::wstring& str, const std::wstring& mask) const
 {
+    long offset = 0L;
     for(const WordSegment& segment : _filterList->find(str))
     {
-        str.replace(segment._start, segment._length, mask);
+        str.replace(segment._start + offset, segment._length, mask);
+        offset += mask.length() - segment._length;
     }
     return str;
 }
