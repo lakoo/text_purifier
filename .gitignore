@@ -24,6 +24,7 @@ Makefile
 Makefile.in
 missing
 stamp-h1
+test-driver
 
 # make
 .deps/
@@ -31,3 +32,22 @@ stamp-h1
 *.la
 *.lo
 *.o
+
+# gcov
+*.gcda
+*.gcno
+*.gcov
+
+# test
+test-driver
+test/cppcheck.sh.log
+test/cppcheck.sh.trs
+test/test
+test/test-gcov
+test/test-gcov.log
+test/test-gcov.trs
+test/test-suite.log
+test/test.log
+test/test.trs
+test/valgrind.sh.log
+test/valgrind.sh.trs
