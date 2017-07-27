@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([textpurifier], [0.8.7], [aludirk@lakoo.com], [textpurifier], [https://github.com/lakoo/text_purifier])
+AC_INIT([textpurifier], [0.9.0], [aludirk@lakoo.com], [textpurifier], [https://github.com/lakoo/text_purifier])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
 AC_CONFIG_HEADERS([config.h])
@@ -24,6 +24,7 @@ AX_CXX_COMPILE_STDCXX_11([noext], [mandatory])
 
 # Checks for libraries.
 AC_CHECK_LIB([cppunit], [main])
+AC_CHECK_LIB([textpurifier], [main])
 
 # Checks for header files.
 
@@ -38,5 +39,6 @@ AC_CHECK_FUNCS([memset setlocale])
 AC_CONFIG_FILES([
 	Makefile
 	src/Makefile
+	test/Makefile
 ])
 AC_OUTPUT
