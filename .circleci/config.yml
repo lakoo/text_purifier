@@ -24,6 +24,10 @@ jobs:
           name: Run Test
           command: |
             make check
+      - run:
+          name: Codecov
+          command: |
+            bash <(curl -s https://codecov.io/bash)
       - deploy:
           name: Deploy
           command: |
