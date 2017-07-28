@@ -26,6 +26,10 @@ missing
 stamp-h1
 test-driver
 
+# Doxygen
+Doxyfile
+html/
+
 # make
 .deps/
 .libs/
@@ -42,6 +46,8 @@ test-driver
 test-driver
 test/cppcheck.sh.log
 test/cppcheck.sh.trs
+test/doxygen.sh.log
+test/doxygen.sh.trs
 test/test
 test/test-gcov
 test/test-gcov.log

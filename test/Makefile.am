@@ -1,11 +1,23 @@
-TESTS = cppcheck.sh test test-gcov valgrind.sh
+TESTS =
+check_SCRIPTS =
 
 ################################################################################
 
-check_SCRIPTS = cppcheck.sh
+if ENABLE_DOXYGEN
+
+TESTS += doxygen.sh
+check_SCRIPTS += doxygen.sh
+
+endif
 
 ################################################################################
 
+TESTS += cppcheck.sh
+check_SCRIPTS += cppcheck.sh
+
+################################################################################
+
+TESTS += test
 check_PROGRAMS = test
 
 AM_CXXFLAGS = -I$(top_srcdir)/include -Wpedantic -Wall -Wextra -Werror
@@ -19,6 +31,7 @@ test_SOURCES = \
 
 ################################################################################
 
+TESTS += test-gcov
 check_PROGRAMS += test-gcov
 
 test_gcov_CXXFLAGS = ${AM_CXXFLAGS} -ftest-coverage -fprofile-arcs
@@ -30,9 +43,11 @@ test_gcov_SOURCES = ${test_SOURCES}
 
 ################################################################################
 
+TESTS += valgrind.sh
 check_SCRIPTS += valgrind.sh
 
 ################################################################################
 
 clean-local:
+	rm -rf html/
 	rm -f *.gcda *.gcno *.gcov
