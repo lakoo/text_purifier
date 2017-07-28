@@ -2,7 +2,11 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([textpurifier], [0.9.0], [aludirk@lakoo.com], [textpurifier], [https://github.com/lakoo/text_purifier])
+AC_INIT([Text Purifier],
+        [0.9.1],
+        [aludirk@lakoo.com],
+        [textpurifier],
+        [https://github.com/lakoo/text_purifier])
 AC_CONFIG_MACRO_DIRS([m4])
 AM_INIT_AUTOMAKE
 AC_CONFIG_HEADERS([config.h])
@@ -22,6 +26,21 @@ AC_PROG_RANLIB
 AC_LANG([C++])
 AX_CXX_COMPILE_STDCXX_11([noext], [mandatory])
 
+# Doxygen
+AC_ARG_ENABLE([doxygen],
+              AS_HELP_STRING([--enable-doxygen], [Enable doxygen]))
+AM_CONDITIONAL([ENABLE_DOXYGEN], [test "x$enable_doxygen" = "xyes"])
+AM_COND_IF([ENABLE_DOXYGEN],
+           [
+               AC_CHECK_PROGS([DOXYGEN], [doxygen])
+               if test -z "$DOXYGEN"; then
+                   AC_MSG_ERROR([Doxygen not found])
+               fi
+               AC_CONFIG_FILES([docs/Doxyfile
+                                docs/Makefile
+                                test/Doxyfile])
+           ])
+
 # Checks for libraries.
 AC_CHECK_LIB([cppunit], [main])
 AC_CHECK_LIB([textpurifier], [main])
@@ -37,8 +56,8 @@ AC_TYPE_SIZE_T
 AC_CHECK_FUNCS([memset setlocale])
 
 AC_CONFIG_FILES([
-	Makefile
-	src/Makefile
-	test/Makefile
+    Makefile
+    src/Makefile
+    test/Makefile
 ])
 AC_OUTPUT
