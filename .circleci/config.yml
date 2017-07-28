@@ -24,6 +24,11 @@ jobs:
           name: Run Test
           command: |
             make check
+            cat test/doxygen.sh.log
+            cat test/cppcheck.sh.log
+            cat test/test.log
+            cat test/test-gcov.log
+            cat test/valgrind.sh.log
       - run:
           name: Codecov
           command: |
