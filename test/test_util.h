@@ -550,8 +550,8 @@ namespace TestUtil
         testPurifyWithString<_Type, _Type>(tp, false);
         testPurifyWithString<_Type, typename _Type::value_type>(tp);
         testPurifyWithString<_Type, typename _Type::value_type>(tp, false);
-        testPurifyWithCharacter<_Type, typename _Type::value_type>(tp);
-        testPurifyWithCharacter<_Type, typename _Type::value_type>(tp, false);
+        // testPurifyWithCharacter<_Type, typename _Type::value_type>(tp);
+        // testPurifyWithCharacter<_Type, typename _Type::value_type>(tp, false);
     }
 
     template <typename _Type>
