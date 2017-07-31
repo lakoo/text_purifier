@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([Text Purifier],
-        [0.9.5],
+        [0.9.6],
         [aludirk@lakoo.com],
         [textpurifier],
         [https://github.com/lakoo/text_purifier])

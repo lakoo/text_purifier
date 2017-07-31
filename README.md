@@ -1,4 +1,7 @@
-# Text Purifier (0.9.5)
+# Text Purifier (0.9.6)
+
+[![CircleCI](https://circleci.com/gh/lakoo/text_purifier.svg?style=svg)](https://circleci.com/gh/lakoo/text_purifier)
+[![codecov](https://codecov.io/gh/lakoo/text_purifier/branch/master/graph/badge.svg)](https://codecov.io/gh/lakoo/text_purifier)
 
 - [Introduction](#introduction)
 - [Installation](#installation)
