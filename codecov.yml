@@ -1,4 +1,6 @@
 codecov:
+  branch: master
+  strict_yaml_branch: master
   notify:
     require_ci_to_pass: yes
 
