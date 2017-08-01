@@ -1,4 +1,4 @@
-# Text Purifier (0.9.6)
+# Text Purifier (1.0.0)
 
 [![CircleCI](https://circleci.com/gh/lakoo/text_purifier.svg?style=svg)](https://circleci.com/gh/lakoo/text_purifier)
 [![codecov](https://codecov.io/gh/lakoo/text_purifier/branch/master/graph/badge.svg)](https://codecov.io/gh/lakoo/text_purifier)
@@ -6,6 +6,7 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Example](#example)
+- [Change Logs](#change-logs)
 - [License](#license)
 
 ## Introduction
@@ -186,6 +187,12 @@ char
 13. 這裏有歧視言論、粗口用語、色情圖片等等。 -> 這裏有****、**用語、****等等。
 14. 這裏有歧視言論、粗口用語、色情圖片等等。 -> 這裏有#、#用語、#等等。
 ```
+
+## Change Logs
+
+| Version | Change Logs |
+|:-------:| ----------- |
+| 1.0.0 | First release. |
 
 ## License
 
